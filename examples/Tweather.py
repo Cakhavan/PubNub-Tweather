@@ -23,6 +23,7 @@ import sys
 
 import Adafruit_DHT
 
+import pubnub
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub import PubNub
  
