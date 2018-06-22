@@ -44,7 +44,7 @@ def publish_callback(result, status):
 # Parse command line parameters.
 
 #if len(sys.argv) == 3 and sys.argv[1] in sensor_args:
-sensor = 2302
+sensor = 22
 pin = 4
 #else:
  #   print('usage: sudo ./Adafruit_DHT.py [11|22|2302] GPIOpin#')
