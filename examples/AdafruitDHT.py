@@ -23,6 +23,22 @@ import sys
 
 import Adafruit_DHT
 
+from pubnub.pnconfiguration import PNConfiguration
+from pubnub.pubnub import PubNub
+ 
+pnconfig = PNConfiguration()
+pnconfig.subscribe_key = "sub-c-a667485c-757f-11e8-9f59-fec9626a7085"
+pnconfig.publish_key = "pub-c-cb2e18e3-a8b0-486a-bf82-2d9e9f670b7e"
+pnconfig.ssl = False
+ 
+pubnub = PubNub(pnconfig)
+
+
+def publish_callback(result, status):
+    pass
+    # Handle PNPublishResult and PNStatus
+ 
+
 
 # Parse command line parameters.
 sensor_args = { '11': Adafruit_DHT.DHT11,
@@ -48,7 +64,8 @@ humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
 # guarantee the timing of calls to read the sensor).
 # If this happens try again!
 if humidity is not None and temperature is not None:
-    print('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+    tweet = ('Temp={0:0.1f}*  Humidity={1:0.1f}%'.format(temperature, humidity))
+    pubnub.publish().channel('twitter-input').message(tweet).async(publish_callback)
 else:
     print('Failed to get reading. Try again!')
     sys.exit(1)
