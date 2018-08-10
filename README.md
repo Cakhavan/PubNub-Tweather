@@ -28,3 +28,17 @@ Adafruit invests time and resources providing this open source code, please supp
 Written by Tony DiCola for Adafruit Industries.
 
 MIT license, all text above must be included in any redistribution
+
+
+
+ <a href="https://dashboard.pubnub.com/signup?devrel_gh=Cakhavan/PubNubStateMachine">
+    <img alt="PubNub Signup" src="https://i.imgur.com/og5DDjf.png" width=260 height=97/>
+</a>
+
+
+**VVVFull Tutorial HereVVV**
+
+
+<a href="https://www.pubnub.com/blog/create-an-iot-twitter-bot-in-5-easy-steps/?devrel_gh=Cakhavan/PubNubStateMachine">
+    <img alt="PubNub Blog" src="https://i.imgur.com/aJ927CO.png" width=260 height=98/>
+</a>
